@@ -37,7 +37,7 @@ class Customer < ActiveRecord::Base
  
 end
 
-class Invoice < ActiveRecord::Base
+class Transaction < ActiveRecord::Base
 
 end
 
