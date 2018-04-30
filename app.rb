@@ -14,20 +14,6 @@ ActiveRecord::Base.establish_connection(
   database: 'carson.sqlite'
 )
 
-# Define a minimal database schema
-# Everytime the script is run it clears the databse, this 
-# is okay while working on the carson's request.
-ActiveRecord::Schema.define do
-  create_table :cars, force: true do |t|
-    t.string :name
-    t.string :color
-  end
-
-  # Create more tables here
-
-
-end
-
 # Define the models and relationships
 class Car < ActiveRecord::Base
 
@@ -40,6 +26,12 @@ end
 class Transaction < ActiveRecord::Base
 
 end
+
+# Everytime the script is run it clears the database, this 
+# is okay while working on carson's request.
+Car.destroy_all
+Customer.destroy_all
+Transaction.destroy_all
 
 # Create a few records...
 # or import that CSV and create the appropriate records off of it. 
