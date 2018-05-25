@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'activerecord'
-gem 'sqlite3'
-gem 'pry'
+gem 'sinatra'
+gem 'sinatra-activerecord', '~> 2.0'
+gem 'rake'
+gem 'pg'
+gem 'shotgun'
